@@ -7,10 +7,8 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-			{
-				test: /\.json$/,
-				loader: "json-loader"
-			}
+			{test: /\.json$/,loader: "json-loader"},
+			{test: /\.js$/,loader: "babel-loader",query:{presets:['es2015','react']}}
 		]
 	},
 	devServer: {
