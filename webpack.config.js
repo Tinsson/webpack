@@ -8,7 +8,8 @@ module.exports = {
 	module: {
 		loaders: [
 			{test: /\.json$/,loader: "json-loader"},
-			{test: /\.js$/,loader: "babel-loader",query:{presets:['es2015','react']}}
+			{test: /\.js$/,loader: "babel-loader",exclude: /node_modules/},
+			{test: /\.css$/,loader: "style-loader!css-loader"}
 		]
 	},
 	devServer: {
